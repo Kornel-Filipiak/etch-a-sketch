@@ -19,4 +19,16 @@ function createGrid(size){
 
 }
 
+function addColor(e){
+    e.target.classList.add('coloring');
+
+}
+
+
+
 createGrid(7);
+
+const squares = document.querySelectorAll('.square');
+squares.forEach((square) => {
+    square.addEventListener('mouseover', addColor);
+});
